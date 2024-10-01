@@ -1,0 +1,15 @@
+{
+	"dockerComposeFile": "compose.yaml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+
+	"features": {
+		"ghcr.io/devcontainers/features/go:1": {
+			"version": "1.22.3"
+		}
+	},
+
+	"containerEnv": {
+		"CGO_ENABLED": "0"
+	}
+}

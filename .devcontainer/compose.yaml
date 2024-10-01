@@ -1,0 +1,25 @@
+services:
+  db:
+    image: mariadb:10.9.4
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: library
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - db:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  app:
+    image: "mcr.microsoft.com/devcontainers/base:bookworm"
+    init: true
+    command: ["sleep", "infinity"]
+    volumes:
+      - ..:/workspace:cached
+    depends_on:
+      - db
+
+volumes:
+  db:
