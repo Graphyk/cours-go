@@ -1,4 +1,4 @@
-module github.com/spacefoot/google-shopping-connector
+module github.com/Graphyk/cours-go
 
 go 1.21
 

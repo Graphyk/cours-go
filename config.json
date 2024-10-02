@@ -1,0 +1,6 @@
+{
+    "db" {
+        "read" : "gsc:password@tcp(db:3306)/root",
+        "write" : "gsc:password@tcp(db:3306)/root"
+    }
+}

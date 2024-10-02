@@ -28,8 +28,8 @@ func argsOrEnvString(cmd *cobra.Command, args, env string) string {
 var DebugLog bool
 
 var rootCmd = &cobra.Command{
-	Use:   "google-shopping-connector",
-	Short: "Google Shopping Connector",
+	Use:   "cours go",
+	Short: "cours go",
 	PersistentPreRun: func(cmd *cobra.Command, args []string) {
 		logLevel := new(slog.LevelVar)
 		switch argsOrEnvString(cmd, "log-level", "LOG_LEVEL") {
